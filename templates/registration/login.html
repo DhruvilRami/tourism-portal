@@ -1,0 +1,30 @@
+{% include "base/header.html" %}
+	{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/login.css' %}"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><b><u> Login </u></b></h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Log In </button>
+    </form>
+<br>
+    <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+            Don't have an account? <a href="{% url 'tourbooking:signup' %}" style="text-decoration:none"> Sign Up &nbsp </a>
+        </div>
+        <br><br>
+        <div class="d-flex justify-content-center links">
+            Forgot Password? <a href="{% url 'tourbooking:password_reset' %}" style="text-decoration:none"> Reset Password &nbsp </a>
+        </div>
+    </div><br>
+</body>
+</html>
+{% include "base/footer.html" %}

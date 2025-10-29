@@ -1,0 +1,38 @@
+.slide_content_wrap h1{
+    padding-left: 13%;
+}
+.col-md-7{
+    padding-left: 3%;
+    font-size: 20px;
+}
+.center{
+    font-size: 60;
+    font-family: 'Times New Roman';
+    color: #28282b;
+}
+.md-form{
+    padding-left: 13%;
+}
+.feed{
+    padding-left: 13%;
+}
+.heading{
+    
+    color: green;
+    font-size: 25;
+    font-family: 'Times New Roman';
+}
+.slide img{
+    padding-left: 10%;
+}
+.rating{
+    font-size: 20px;
+    padding-left: 3%;
+}
+.review{
+    font-size: 20px;
+    padding-left: 3%;
+}
+.checked{
+    color: #FD4;
+}

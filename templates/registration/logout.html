@@ -1,0 +1,31 @@
+{% include "base/header.html" %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/home.css' %}">
+</head>
+<body> 
+<div class="bg-image"> <img src="{% static 'tourbooking/images/goa.jpg' %}" style="width: 100%;"> </div>
+	<div class="bg-text">
+		<h1>Trust Our Experience</h1>
+		<p>Discover your next holiday destination with Us</p>
+	</div>
+<br>
+<div class="tag">
+	<h1> Special Offers </h1>
+</div>
+{% block content %}
+<div class="row">
+	{% for package in data %}
+		{% if package.price >= 1000 %}
+			<div style="margin-bottom:25px;">
+				<img src="{{package.image.first.file.url}}" alt="" height="200" width="300" /> 
+				<p><h2 style="color: #3A3B3C"> {{package.title}}</h2></p>
+				<p><h3 style="color: #3A3B3C"> {{package.duration}} &nbsp | &nbsp ${{package.price}} </h3></p>
+				<a href="{% url 'tourbooking:package' package.id %}" style="text-decoration:none" "border:none">See more </a>
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>
+{% endblock %}
+<br>
+{% include "base/footer.html" %}
+			

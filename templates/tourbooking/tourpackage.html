@@ -1,0 +1,128 @@
+{% include "base/header.html" %}
+	{% load static %}
+{% block title %}<center><h1 style="color:brown;text-align:center">{{package_data.title}}</h1></center>{% endblock %}<br>
+<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/home.css' %}">
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/tourpackage.css' %}">
+</head>
+<body>
+	
+{% block body %}
+<div class="banner">
+    <!-- start slider -->
+    <div id="fwslider">
+        <div class="slider_container">
+            {% for image in image_data %}
+            <div class="slide">
+                <!-- Slide image -->
+                <img src="{{image.file.url}}" class="img-responsive" alt="" height="100%" width="90%" />
+                <!-- /Slide image -->
+                <!-- Texts container -->
+                <div class="slide_content">
+                    <div class="slide_content_wrap"> 
+                        <!-- Text title -->
+                        <h1 style="color:brown" class="title">Explore {{package_data.title}}</h1>
+                        <!-- /Text title -->
+                        <!--<div class="button"><a href="#">See Details</a></div>-->
+                        <!-- /Texts container -->
+                    </div>
+                </div>
+            </div>
+            <!-- /Duplicate to create more slides -->
+            <div><br></div>
+            {% endfor %}
+        </div>
+        <div class="timers"></div>
+        <div class="slidePrev"><span></span></div>
+        <div class="slideNext"><span></span></div>
+    </div>
+    <!--/slider -->
+</div>
+
+<div class="content-bottom">
+    <div class="container">
+        <div class="row content_bottom-text">
+            <div class="col-md-7">
+                <!--<h3 style="color:black"><b>North India Tour</b></h3>-->
+                <h2 style="color:rgb(0, 102, 128)"><b>Trip Duration</b></h2>
+                <h3 style="color:green"><b>{{package_data.duration}} - {{package_data.title}}<br><br> </b></h3>
+                <h4 style="color:brown"><b>On: {{package_data.date}} </b></h4>
+                <p style="color:black"><b> {{package_data.description}} </b></p><br>
+
+
+                <h2 style="color:green"><b>ITINERARY</b></h2>
+                <ul style="list-style-type:none;">
+                    {% for itinerary in itinerary_data %}
+                    <h2 style="color:brown"><b>{{itinerary.title}}: </b></h2>
+                    <li> <b> {{itinerary.description}}</b></li><br>
+                    {% endfor %}
+                </ul>
+                <h2>
+                    <span style="color:green">
+                        <b>Price : </b>
+                    </span>
+                    <span style="color:brown">
+                        <b>{{package_data.price}}$ </b>
+                    </span>
+                </h2>
+                <a href="/book/{{package_data.id}}">BOOK NOW</a>
+
+
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class=rating>
+            
+            <b><span class="heading">User Rating</span></b>
+            {% if rating >= 1 %}
+            <span class="fa fa-star checked"></span>
+            {% else %}
+            <span class="fa fa-star "></span>
+            {% endif %}
+            {% if rating >= 2 %}
+            <span class="fa fa-star checked"></span>
+            {% else %}
+            <span class="fa fa-star"></span>
+            {% endif %}
+            {% if rating >= 3 %}
+            <span class="fa fa-star checked"></span>
+            {% else %}
+            <span class="fa fa-star "></span>
+            {% endif %}
+            {% if rating >= 4 %}
+            <span class="fa fa-star checked"></span>
+            {% else %}
+            <span class="fa fa-star "></span>
+            {% endif %}
+            {% if rating == 5 %}
+            <span class="fa fa-star chacked"></span>
+            {% else %}
+            <span class="fa fa-star"></span>
+            {% endif %}
+            <b><p>{{rating}}average based on {{counter}} reviews.</p></b>
+        </div>
+        <br>
+
+        <br>
+        <br>
+        <div class=review>
+            <h2 style="color:green"><b>Reviews</b></h2>
+            {% for review in review_data %}
+            <h4>{{review}}</h4>
+
+            <h5 style="margin-left: 20px;"><b>{{review.review}}</b></h5>
+            <br>
+            {% endfor %}
+</div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+<body>
+{% include "base/footer.html" %}

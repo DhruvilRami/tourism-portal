@@ -1,0 +1,21 @@
+{% include "base/header.html" %}
+	{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/home.css' %}">
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/package.css' %}">
+</head>
+<h1 style="color:brown;text-align:center">Tour Packages</h1>
+{% block content %} 
+<div class="row">
+	{% for package in object_list %}
+	<div  style="margin-bottom:25px;">
+		<img src="{{package.image.first.file.url}}" alt="" height="200" width="300" /> 
+		<p><h2 style="color: #3A3B3C"> {{package.title}}</h2></p>
+		<p><h3 style="color: #3A3B3C"> {{package.duration}} &nbsp | &nbsp ${{package.price}} </h3></p>
+		<a href="{% url 'tourbooking:package' package.id %}" style="text-decoration:none">See more </a>
+	</div>
+	{% endfor %}
+</div> 
+{% endblock %}  
+<br>
+{% include "base/footer.html" %}

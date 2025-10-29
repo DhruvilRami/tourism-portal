@@ -1,0 +1,51 @@
+.logo{
+		padding-left:100;
+	}
+.header{
+		padding-left:1000;
+		font-size:20;
+		text-decoration:none;
+	}
+.header a{
+		color: #2a2b2c;
+}
+.header1{
+		padding-left:550;
+		margin-top:20;
+		background-color: greenyellow;
+		overflow:hidden;
+		font-size:25;
+		height:40;
+		line-height: 1.42857143 !important;
+	}
+.header1 a{
+	color: #2a2b2c;
+}
+.header1 a.active{
+		text-decoration:none;
+		color:white;
+	}
+/* The alert message box */
+.alert {
+	padding: 20px;
+	background-color: #22f044d8; 
+	color: white;
+	margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+	color: black;
+  }

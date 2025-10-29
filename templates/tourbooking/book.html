@@ -1,0 +1,49 @@
+{% include "base/header.html" %}
+{% load static %}
+{% block title %}<h2>Book - {{package_data.title}}</h2>{% endblock %}
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static 'tourbooking/book.css' %}">
+    {% endblock %}
+
+{% block body %}
+<br>
+<div class="container">
+    {% if message %}
+    <h1>{{message}}</h1>
+    {% else %}
+    <h1>Your trip to {{package_data.title}} is confirmed</h1>
+    <h3>you will receive confirmation from {{package_data.user}} shortly</h3>
+    {% endif %}
+    <br>
+</div>
+<div class="container">
+    <h1 style="color:brown;text-align:center">Show Past Trips</h1>
+    <br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Package</th>
+                <th>Date</th>
+                <th>Cancel?</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in registration_data %}
+            <tr>
+                <td>{{data.user}}</td>
+                <td>{{data.package}}</td>
+                <td>{{data.package.date}}</td>
+                <td><button type="submit" class="btn button-w3layouts" style="color:brown">
+                    <a href="/delete/{{data.id}}">Cancel</a></button></td>
+                <td><button type="submit"><a href="{% url 'tourbooking:rating' data.id %}">Rating</a></button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+<br>
+{% include "base/footer.html" %}

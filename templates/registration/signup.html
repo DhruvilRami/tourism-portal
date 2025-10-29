@@ -1,0 +1,19 @@
+{% include "base/header.html" %}
+	{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/signup.css' %}"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><b><u> Registration </u></b></h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Sign Up</button>
+    </form>
+</body>
+</html>
+{% include "base/footer.html" %}

@@ -1,0 +1,58 @@
+{% include "base/header.html" %}
+	{% load static %}
+    
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static 'tourbooking/trip.css' %}">
+    {% endblock %}
+    
+    {% block body %}
+      
+    <br>
+    {% if registration_data %}
+    <div class="container">
+        <h1 style="color:brown;text-align:center">Show Past Trips</h1>
+        <br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Package</th>
+                    <th>Date</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <center>Today:{{today}}</center>
+                {% for data in registration_data %}
+                <br>
+                <tr>
+                    <td>{{data.user}}</td>
+                    <td>{{data.package}}</td>
+                    <td>{{data.package.date}}</td>
+                    {% if data.package.date > today %}
+                    <td><button type="submit" class="button button1" style="color:brown"><a
+                                href="/delete/{{data.id}}">Cancel</a></button></td>
+                    {% else %}
+                    {% if registration_data.id in rating_data.registration %}
+                    {{rating_data.stars}}
+                    {% else %}
+                    <td><button type="submit" class="button button2" style="color:brown"><a
+                                href="/rating/{{data.id}}">Rate</a></button>
+                    </td>
+                    {% endif %}
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <h1 style="color:brown;text-align:center">No Trips</h1>
+        {% endif %}
+    
+    </div>
+    
+    {% endblock %}
+    <br>
+ 
+
+{% include "base/footer.html" %}

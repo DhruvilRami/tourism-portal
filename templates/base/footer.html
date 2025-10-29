@@ -1,0 +1,46 @@
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/footer.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="footer">
+		<div class="month">
+			<div class="footer-col">
+				<u><h4>Quick Links</h4></u>
+				<ul>
+					<li><a href="{% url 'tourbooking:home' %}"style="text-decoration:none"> Home </a> </li>
+					<li><a href="{% url 'tourbooking:package' %}"style="text-decoration:none"> Tour Packages </a></li>
+					<li><a href="{% url 'tourbooking:contact' %}"style="text-decoration:none"> Contact Us </a> </li>
+					<li><a href="{% url 'tourbooking:trip' %}"style="text-decoration:none"> Trips </a> </li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<u><h4>Tour Mania</h4></u>
+				<ul>
+					<li><a href=""> Privacy Policy </a> </li>
+					<li><a href=""> Terms & Conditions </a></li>
+					<li><a href="{% url 'tourbooking:about' %}" style="text-decoration:none"> About Us </a> </li>	
+				</ul>
+			</div>
+			<div class="footer-col">
+				<u><h4>Contact Us</h4></u>
+				<ul>
+					<li><i class="fa fa-envelope" style="font-size:18px"> tourmania01@gmail.com </i></li>
+					<li><i class="fa fa-phone" style="font-size:18px"> +91-9328463677 </i></li>
+					<a href=https://www.instagram.com/tourmania01/><i class="fa fa-instagram " aria-hidden="true"></i></a>
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+					<a href=https://www.facebook.com/profile.php?id=100080621630214> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href=https://www.youtube.com/channel/UCHod3tjHKYp3Spk0ab2T-zg/> <i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+					
+				</ul>
+			</div>
+			<div class="footer">
+				<h3>Copyright &copy; 2022-Tourmania.All Rights Reserved</h3>
+			</div>
+			
+</body>
+</html>

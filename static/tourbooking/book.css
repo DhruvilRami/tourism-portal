@@ -1,0 +1,21 @@
+.table table-hover{
+    padding-left: 500;
+}
+th{
+    text-align: center;
+    height: 70px;
+}
+td{
+    text-align: center;
+    height: 50px;
+}
+tr:hover {
+    background-color: greenyellow;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid;
+  }

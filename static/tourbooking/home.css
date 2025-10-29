@@ -1,0 +1,103 @@
+	*{
+		box-sizing: border-box;
+	}
+
+	.img {
+	/* The image used */
+	
+	background-image: url("/static/tourbooking/images/goa.jpg");
+	
+	/* Add the blur effect */
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+
+	/* Full height */
+	height: 100%;
+
+	/* Center and scale the image nicely */
+	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+
+	/* Position text in the middle of the page/image */
+	.bg-text {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	}
+	.touch{
+		text-align:center;
+	}
+	.button{
+		padding-left:200;
+		margin: 40px 0 20px 0;
+	}
+	.input-box input[type="submit"]{
+		background: linear-gradient(to right, lightgreen,green);
+		font-size: 17px;
+		color: #fff;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	.input-box input[type="submit"]:hover{
+		letter-spacing: 1px;
+		background: linear-gradient(to left, lightgreen,green);
+	}
+	.column {
+		float: left;
+		width: 33.33%;
+		padding: 5px;
+	}
+	.row::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+	.row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 10px;
+		padding-left: 10%;
+		justify-content: space-around;
+	}
+	.column {
+		flex: 33.33%;
+		padding: 5px;
+	}
+	center{
+		color:green;
+	}
+	.row a{
+		background-color: #1b691e; /* Green */
+		border: none;
+		color: white;
+		padding: 15px 28px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 15px;
+		border-radius: 12px;
+		transition-duration: 0.4s;
+	}
+	.row a:hover{
+		background-color: #4CAF50; /* Green */
+  		color: white;
+	}
+	.tag h1{
+		color: brown;
+		text-align: center;
+	}

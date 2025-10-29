@@ -1,0 +1,42 @@
+{% include "base/header.html" %}
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/home.css' %}">
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'tourbooking/about.css' %}">
+</head>
+<body>
+<div class=main-container>
+	<div class=container>
+		<img src="{% static 'tourbooking/images/about.jpeg' %}" > </img> 
+		<div class=top-left>
+			<h2><b>About Us </b></h2>
+			<p><b>Discover your next holiday destination with Us</b></p>
+		</div>
+	</div>	
+		<div class=top-right>
+			<h1>TourMania</h1>
+			<p><b> Think Less and Feel More</b></p>
+		</div>
+	</div>
+	<br> <br> <br> 
+	<div class=title>
+	<h1> Amazing Trips For All ! </h1>
+	</div>
+	<div class=data>
+		<div class=month>
+			<div class=info>
+				<p><b>Tourmania , We are one of the leading adventure road trips and trekking provider company. As a trekking operator we are well equipped with a team of knowledgeable and well experienced local guides and services to help you with the tour.</b></p>
+				<p><b>We are acknowledged for organizing treks and adventure trips in the state of Uttarakhand, Himachal and Kashmir. Due to the transparency in our tour packages and services you are surely to take home memories of exceptional value every time.</b></p> 
+				<p><b>  At Tourmania, we make it our mission to uncover destinations and make them accessible to our clients who love to explore themselves. For if you are a beginner or an experienced trekker, it is we who ensure that you get the best of local guides, trek equipment and even the best of local cuisines and cultures that you can enjoy en route. </b></p>
+				<a href="{% url 'tourbooking:package' %} "style="text-decoration:none"> Special Offers </a> 
+			</div>
+			<div class=info>
+				<img src="{% static 'tourbooking/images/aboutdata.jpg' %}" > </img> 
+			</div>
+		</div>
+	</div>
+	<br><br>
+</div>
+</body>
+</html>
+{% include "base/footer.html" %}

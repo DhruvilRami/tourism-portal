@@ -1,0 +1,67 @@
+	.footer {
+		position:center; 
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height:50%;
+		background-color: #28282B;
+		color: white;
+		font-size:20;
+		text-align: center;
+	}
+	.month{
+		text-align:left;
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 10%;
+	}
+	.footer-col{
+		width: 30%;
+	}
+	.month .img2{
+		padding-left:850;
+	}
+	.p{
+		margin-top:300;
+	}
+	.size{
+		padding-right: 100;
+		text-align: center;
+	}
+	ul{
+		list-style: none;
+	} 
+	.footer-col{
+		color: whitesmoke;
+	}
+	.footer-col a{
+		font-size: 18px;
+		color: whitesmoke;
+		text-transform: capitalize;
+		margin-bottom: 15px;
+		font-weight: 500;
+		position: relative;
+	}	
+	.footer-col ul li:not(:last-child){
+		margin-bottom: 10px;
+	}
+	.footer-col ul li a{
+		font-size: 20px;
+		text-transform: capitalize;
+		color: #00FF00;
+		text-decoration: none;
+		font-weight: 300;
+		color: #bbbbbb;
+		display: block;
+		transition: all 0.3s ease;
+	}
+	.footer-col ul li a:hover{
+		color:#00FF00;
+		padding-left: 8px;
+	}
+	.footer-col ul p{
+		color: #bbbbbb;
+	}
+	.footer-col h4{
+		padding-left: 10%;
+	}
